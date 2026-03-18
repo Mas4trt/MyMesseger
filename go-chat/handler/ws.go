@@ -45,10 +45,10 @@ func WebSocketHandler(manager *room.Manager) http.HandlerFunc {
 				return
 			}
 
-			fullMessege := client.Nickname + ": " + string(msg)
+			fullMessage := client.Nickname + ": " + string(msg)
 
 			for c := range rm.Clients {
-				c.Conn.WriteMessage(websocket.TextMessage, []byte(fullMessege))
+				c.Conn.WriteMessage(websocket.TextMessage, []byte(fullMessage))
 			}
 		}
 	}
