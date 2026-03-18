@@ -90,6 +90,37 @@ button:active { transform: translateY(0); box-shadow: none; }
   animation: fadeIn 0.2s ease-out;
 }
 
+.textarea {
+  flex: 1;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(0,0,0,0.35);
+  color: #fff;
+  font-size: 14px;
+
+  min-height: 44px;
+  max-height: 120px;
+
+  overflow-y: auto;
+  outline: none;
+
+  white-space: pre-wrap;
+  word-break: break-word;
+
+  scrollbar-width: none;
+}
+
+.textarea::-webkit-scrollbar {
+  display: none;
+}
+
+/* placeholder для contenteditable */
+.textarea:empty:before {
+  content: attr(placeholder);
+  color: #9a9ab0;
+}
+
 @keyframes fadeIn { from {opacity:0; transform:translateY(4px);} to {opacity:1; transform:translateY(0);} }
 
 @media(max-width:480px){

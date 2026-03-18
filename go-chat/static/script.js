@@ -31,9 +31,14 @@ function joinRoom() {
 
 function sendMessage() {
     const input = document.getElementById('message');
-    if (input.value.trim() !== '') {
-        ws.send(input.value);
-        input.value = '';
+    const text = input.innerText;
+
+    if (text.trim() !== '') {
+        ws.send(text);
+
+        input.innerHTML = '';
+        input.style.height = '44px';
+        input.style.overflowY = 'hidden';
     }
 }
 
@@ -46,3 +51,29 @@ function addMessage(text, className = 'user-message') {
     const messages = document.getElementById('messages');
     messages.scrollTop = messages.scrollHeight;
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    const messageInput = document.getElementById('message');
+
+    messageInput.addEventListener('keydown', function(event) {
+        if (event.key === 'Enter' && !event.shiftKey) {
+            event.preventDefault();
+            sendMessage();
+        }
+    });
+});
+
+const messageInput = document.getElementById('message');
+const maxHeight = 120;
+
+messageInput.addEventListener('input', () => {
+    messageInput.style.height = 'auto';
+
+    if (messageInput.scrollHeight <= maxHeight) {
+        messageInput.style.height = messageInput.scrollHeight + 'px';
+        messageInput.style.overflowY = 'hidden';
+    } else {
+        messageInput.style.height = maxHeight + 'px';
+        messageInput.style.overflowY = 'auto';
+    }
+});
