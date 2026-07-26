@@ -1,10 +1,13 @@
 import {useState} from "react";
 
+type ToastType = "success" | "error" | "info" | "warning";
+interface ToastItem { id: string; type: ToastType; title: string; message: string; }
+
 
 export function useToast(){
 
 
-const [items,setItems]=useState<any[]>([]);
+const [items,setItems]=useState<ToastItem[]>([]);
 
 
 
@@ -21,11 +24,7 @@ function remove(id:string){
 
 
 function add(
-    type:
-    "success"|
-    "error"|
-    "info"|
-    "warning",
+    type: ToastType,
 
     title:string,
 
