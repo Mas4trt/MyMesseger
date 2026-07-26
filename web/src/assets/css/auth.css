@@ -1,0 +1,428 @@
+/* =====================================
+   DISCORD AUTH PAGE
+===================================== */
+
+
+.auth-page {
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:20px;
+
+
+    background:
+        var(--background-primary);
+
+}
+
+
+
+
+.auth-card {
+
+
+    width:480px;
+
+
+    padding:32px;
+
+
+    background:
+        var(--background-secondary);
+
+
+    border-radius:
+        8px;
+
+
+    box-shadow:
+        0 8px 24px rgba(0,0,0,.45);
+
+
+}
+
+
+
+/* HEADER */
+
+
+.auth-title {
+
+
+    text-align:center;
+
+
+    font-size:24px;
+
+
+    font-weight:700;
+
+
+    color:
+        var(--text-heading);
+
+
+    margin-bottom:8px;
+
+
+}
+
+
+
+
+.auth-description {
+
+
+    text-align:center;
+
+
+    color:
+        var(--text-muted);
+
+
+    font-size:16px;
+
+
+    margin-bottom:24px;
+
+
+}
+
+
+
+
+
+/* INPUT */
+
+
+.auth-input {
+
+
+    width:100%;
+
+
+    height:44px;
+
+
+    padding:10px 12px;
+
+
+    background:
+        var(--background-tertiary);
+
+
+    border:
+
+        1px solid transparent;
+
+
+    border-radius:
+
+        3px;
+
+
+    color:
+
+        var(--text-normal);
+
+
+    font-size:16px;
+
+
+    transition:
+
+        .15s ease;
+
+
+}
+
+
+
+
+.auth-input:hover {
+
+
+    border-color:#000;
+
+
+}
+
+
+
+.auth-input:focus {
+
+
+    outline:none;
+
+
+    border-color:
+
+        var(--brand);
+
+
+}
+
+
+
+
+
+/* BUTTON */
+
+
+.auth-button {
+
+
+    width:100%;
+
+
+    height:44px;
+
+
+    margin-top:20px;
+
+
+    border-radius:
+
+        3px;
+
+
+    background:
+
+        var(--brand);
+
+
+    color:white;
+
+
+    font-size:16px;
+
+
+    font-weight:600;
+
+
+    transition:
+
+        .15s ease;
+
+
+}
+
+
+
+
+
+.auth-button:hover {
+
+
+    background:
+
+        var(--brand-hover);
+
+
+}
+
+
+
+.auth-button:active {
+
+
+    transform:
+
+        translateY(1px);
+
+
+}
+
+
+
+.auth-button:disabled {
+
+
+    opacity:.6;
+
+    cursor:not-allowed;
+
+}
+
+
+
+
+
+/* FOOTER */
+
+
+.auth-footer {
+
+
+    margin-top:16px;
+
+
+    text-align:center;
+
+
+    color:
+
+        var(--text-muted);
+
+
+    font-size:14px;
+
+
+}
+
+
+
+
+.auth-link {
+
+
+    color:
+
+        #00a8fc;
+
+
+    cursor:pointer;
+
+
+}
+
+
+
+.auth-link:hover {
+
+
+    text-decoration:underline;
+
+
+}
+
+
+
+
+/* ERROR */
+
+
+.auth-error {
+
+
+    padding:12px;
+
+
+    margin-bottom:16px;
+
+
+    background:
+
+        rgba(237,66,69,.15);
+
+
+    border:
+
+        1px solid rgba(237,66,69,.3);
+
+
+    border-radius:4px;
+
+
+    color:
+
+        #ed4245;
+
+
+}
+
+
+
+
+
+/* REGISTER DATE */
+
+
+.birthday-row {
+
+
+    display:flex;
+
+
+    gap:8px;
+
+
+}
+
+
+
+.auth-select {
+
+
+    flex:1;
+
+
+    height:44px;
+
+
+    padding:0 10px;
+
+
+    background:
+
+        var(--background-tertiary);
+
+
+    color:
+
+        var(--text-normal);
+
+
+    border-radius:3px;
+
+
+    border:
+
+        1px solid transparent;
+
+
+}
+
+
+
+
+
+.auth-select:focus {
+
+
+    outline:none;
+
+
+    border-color:
+
+        var(--brand);
+
+
+}
+
+
+
+
+
+@media(max-width:600px){
+
+
+    .auth-card {
+
+
+        width:100%;
+
+
+        padding:24px;
+
+
+    }
+
+
+}

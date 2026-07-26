@@ -1,0 +1,26 @@
+.auth-page {
+    background:var(--bg-primary);
+}
+
+
+.auth-card {
+    background:var(--bg-secondary);
+    box-shadow:var(--shadow-high);
+}
+
+
+.auth-input {
+    background:var(--bg-input);
+    border-color:var(--border);
+    color:var(--text-primary);
+}
+
+
+.auth-button {
+    background:var(--brand);
+}
+
+
+.auth-button:hover {
+    background:var(--brand-hover);
+}
